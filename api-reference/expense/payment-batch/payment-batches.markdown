@@ -21,7 +21,7 @@ The Payment Batch File web service provides an automated solution to clients who
 
 Requests the expense transaction data for the specified payment batch.
 
-    GET /expense/paymentbatch/v1.1/batch/_{BatchID}_/file
+    GET api/expense/paymentbatch/v1.1/batch/_{BatchID}_/file
 
 ### Parameters
 
@@ -39,7 +39,7 @@ This request will return the expense transaction data in text/csv format if ther
 
 Retrieves the list of payment batches with an optional requested status.
 
-    GET /expense/paymentbatch/v1.1/batchlist/
+    GET api/expense/paymentbatch/v1.1/batchlist/
 
 
 ### Parameters
@@ -68,7 +68,7 @@ Name | Type | Format | Description
 
 This request closes the specified batch, preventing any new expenses from entering it. After the batch closes, Concur creates the batch file containing the expense transaction information. If a batch ID for an already closed batch is sent, Concur regenerates the batch file for the specified batch.
 
-    POST /expense/paymentbatch/v1.2/batch/{BatchID}/close
+    POST api/expense/paymentbatch/v1.2/batch/{BatchID}/close
 
 
 ### Parameters
